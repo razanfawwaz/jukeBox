@@ -10,8 +10,6 @@ public class Artist
     @Override
     public String toString()
     {
-        return "Artist{" +
-                "artistName='" + artistName + '\'' +
-                '}';
+        return artistName;
     }
 }

@@ -9,8 +9,6 @@ public class Album {
     @Override
     public String toString()
     {
-        return "Album{" +
-                "Album name= " + albumName + '\'' +
-                '}';
+        return albumName;
     }
 }

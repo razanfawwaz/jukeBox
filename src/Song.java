@@ -24,7 +24,10 @@ public class Song
 
     public void playSong()
     {
-        System.out.println("Playing the song " + songName);
+        System.out.println("Playing the song: " + this.songName);
+        System.out.println("From artist: " + this.artist);
+        System.out.println("From album: " + this.album);
+        System.out.println("Song duration: " + this.duration);
     }
 
     public String getSongName()
@@ -50,11 +53,10 @@ public class Song
     @Override
     public String toString()
     {
-        return "Song{" +
-                "songName='" + songName + '\'' +
-                ", artist=" + artist + '\'' +
-                ", album =" + album + '\'' +
-                ", duration=" +duration +
-                '}';
+        return
+                songName + '\'' +
+                artist + '\'' +
+                album + '\'' +
+                duration;
     }
 }
