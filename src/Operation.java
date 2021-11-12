@@ -24,7 +24,7 @@ public class Operation
         this.start = start;
     }
 
-    public static void main(String[] args)
+    public static int print()
     {
         Scanner menu = new Scanner(System.in);
         boolean condition = true;
@@ -58,9 +58,10 @@ public class Operation
                     {
                         System.out.println("\n\t \t \t \t \t \t \t\t\t\t   PLAY MUSIC \t \t \t \t\t \t \t ");
                         System.out.println(("____________________________________________________________________________________________________"));
+                        return 1;
                     }
             }
-
         }
+        return 0;
     }
 }

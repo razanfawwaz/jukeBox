@@ -2,8 +2,8 @@ public class Song
 {
     String songName;
     Artist artist;
-    String album;
-    double duration;
+    Album album;
+    Duration duration;
 
     public Song()
     {
@@ -12,6 +12,10 @@ public class Song
 
     public Song (String songName, Artist artist, String album, double duration)
     {
+
+    }
+
+    public Song(String songName, Artist artist, Album album, Duration duration) {
         this.songName = songName;
         this.artist = artist;
         this.album = album;
@@ -20,7 +24,7 @@ public class Song
 
     public void playSong()
     {
-        System.out.println("Playing the song" + songName);
+        System.out.println("Playing the song " + songName);
     }
 
     public String getSongName()
@@ -33,12 +37,12 @@ public class Song
         return artist;
     }
 
-    public String getAlbum()
+    public Album getAlbum()
     {
         return album;
     }
 
-    public double getDuration()
+    public Duration getDuration()
     {
         return duration;
     }
