@@ -10,11 +10,6 @@ public class Song
 
     }
 
-    public Song (String songName, Artist artist, String album, double duration)
-    {
-
-    }
-
     public Song(String songName, Artist artist, Album album, Duration duration) {
         this.songName = songName;
         this.artist = artist;

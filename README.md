@@ -5,7 +5,7 @@ Nama Anggota : Muhammad Razan Fawwaz (2008107010098)
 dan Tsani Aflah (2008107010015)  
 Studi kasus  : ***Jukebox***
 
-<h1 align="center"><img width="27%" height="auto" src="http://clipart-library.com/image_gallery/466574.gif"/></h1>
+<h1 align="center"><img width="25%" height="auto" src="http://clipart-library.com/image_gallery/466574.gif"/></h1>
 
 <br>Penjelasan : Jukebox adalah sebuah alat pemutar musik. Jukebox klasik memiliki tombol yang digunakan untuk memainkan pilihan tertentu.
 Pada program ini jukebox akan menampilkan MAIN MENU yang berisi dua pilihan yaitu :
