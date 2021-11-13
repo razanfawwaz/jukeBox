@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 
-public class main {
+public class main
+{
     private static String statement;
 
-    public static void show() {
+    public static void show()
+    {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         List<Song> playlistSong = new ArrayList<>();
 
@@ -61,21 +64,6 @@ public class main {
             System.out.println(("_____________________________________________________________________________________________________"));
             System.out.println("|\t \t                                                                                            |");
             System.out.println("|\t \t                                     MAIN MENU                                              |");
-
-
-            // System.out.print("|\t ");
-            //System.out.println("SONG NAME \t \t \t \t \t\tARTIST \t \t \t \t \t\t ALBUM \t \t \t\t \t DURATION \t|");
-            // System.out.println("|___________________________________________________________________________________________________|");
-            //System.out.println("|(1)Traitor\t\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t3.50\t|");
-            //System.out.println("|(2)Good 4 U\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t2.59\t|");
-            //System.out.println("|(3)Happier Than Ever\t\t\tBillie Eilish\t\t\t\tHappier Than Ever\t\t\t\t4.59\t|");
-            //System.out.println("|(4)Bad Habits\t\t\t\t\tEd Sheeran\t\t\t\t\tBad Habits \t\t\t\t\t\t3.52\t|");
-            // System.out.println("|(5)Painkiller\t\t\t\t\tRuel \t\t\t\t\t\tPainkiller\t\t\t\t\t\t3.34 \t|");
-            //System.out.println("|(6)Cheap Thrills\t\t\t\tSia\t\t\t\t\t\t\tThis is Acting\t\t\t\t\t3.45\t|");
-            //System.out.println("|(7)Wish U Were Here\t\t\tAvril Lavigne\t\t\t\tGoodbye Lullaby\t\t\t\t\t3.46\t|");
-            // System.out.println("|(8)Womanizer\t\t\t\t\tBritney Spears \t\t\t\tCircus\t\t\t\t\t\t\t3.45\t|");
-            //System.out.println("|(9)Rumah ke Rumah\t\t\t\tHindia \t\t\t\t\t\tMenari dengan bayangan\t\t\t4.38\t|");
-            //System.out.println("|(10)Lara\t\t\t\t\t\tDialog Senja \t\t\t\tLara\t\t\t\t\t\t\t5.27\t|");
             System.out.println("|\t \t __________________________________________________________________________________         |");
             System.out.println("|\t \t|          (1) PLAY MUSIC                 |         (2)GO TO PLAYLIST              |        |");
             System.out.println("|\t \t|_________________________________________|________________________________________|        |");
@@ -84,8 +72,8 @@ public class main {
             System.out.print(" \t \tChoose menu: ");
             String option = menu.nextLine();
 
-            // System.out.println();
-            switch (option) {
+            switch (option)
+            {
                 case "1" -> {
                     System.out.println("\n\t \t \t \t \t \t \t\t\t\t   PLAY MUSIC \t \t \t \t\t \t \t ");
                     System.out.println("_____________________________________________________________________________________________________");
@@ -108,7 +96,8 @@ public class main {
                     String chooseSong = menu.nextLine();
                     System.out.println("\n");
                     System.out.println("\t \t \t \t \t \t \t\t\t\t  NOW PLAYING\t \t \t \t\t \t \t ");
-                    switch (chooseSong) {
+                    switch (chooseSong)
+                    {
                         case "1":
                             jukeBox.playSong("Traitor");
                             break;
@@ -149,13 +138,15 @@ public class main {
                     String statement = menu.nextLine();
                     System.out.println("\t=================================================");
 
-                    if (statement.equalsIgnoreCase("y")) {
+                    if (statement.equalsIgnoreCase("y"))
+                    {
                         classOperation.setStart("Y");
                     } else {
                         classOperation.setStart("N");
                     }
 
-                    if (classOperation.isStart()) {
+                    if (classOperation.isStart())
+                    {
                         condition = true;
                     } else {
                         condition = false;
@@ -182,8 +173,9 @@ public class main {
                     System.out.println("|___________________________________________________________________________________________________|");
                     System.out.print("\nAdd song number : ");
                     String songPlaylist = menu.nextLine();
-                    System.out.println("\n");
-                    switch (songPlaylist) {
+                    //System.out.println("\n");
+                    switch (songPlaylist)
+                    {
                         case "1":
                             playlistSong.add(allSongs.get(0));
                             break;
@@ -219,7 +211,8 @@ public class main {
                             break;
                     }
                     System.out.println("\n\t \t \t \t \t \t \t\t\t\t YOUR PLAYLIST \t \t \t \t\t \t \t ");
-                    for (int i = 0; i < playlistSong.size(); i++) {
+                    for (int i = 0; i < playlistSong.size(); i++)
+                    {
                         System.out.println(playlistSong.get(i).songName);
                     }
 
@@ -229,13 +222,15 @@ public class main {
                     String statement = menu.nextLine();
                     System.out.println("\t=================================================");
 
-                    if (statement.equalsIgnoreCase("y")) {
+                    if (statement.equalsIgnoreCase("y"))
+                    {
                         classOperation.setStart("Y");
                     } else {
                         classOperation.setStart("N");
                     }
 
-                    if (classOperation.isStart()) {
+                    if (classOperation.isStart())
+                    {
                         condition = true;
                     } else {
                         condition = false;

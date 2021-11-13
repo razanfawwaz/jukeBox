@@ -34,11 +34,6 @@ public class JukeBox
         requiredSong.playSong();
     }
 
-    public void queueNextSong(String songName){
-        Song requiredSong = selectSong(songName);
-        currentPlayQueue.add(requiredSong);
-    }
-
     public PlayList selectPlayList(String playListName){
         PlayList requiredPlayList = null;
         for(PlayList playList : allPlayLists){

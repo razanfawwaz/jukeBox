@@ -12,11 +12,6 @@ public class PlayList
         this.songsInPlaylist = songsInPlaylist;
     }
 
-    public void addSong(Song song)
-    {
-        songsInPlaylist.add(song);
-    }
-
     public String getPlaylistName()
     {
         return playlistName;
