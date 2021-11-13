@@ -14,14 +14,17 @@ public class Operation
     {
         if(this.statement.equalsIgnoreCase("y"))
         {
-            this.start = start;
+            this.start = true;
+        }else
+        {
+            this.start = false;
         }
         return start;
     }
 
     public void setStart(String statement)
     {
-        this.start = start;
+        this.statement = statement;
     }
 
 }

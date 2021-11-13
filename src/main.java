@@ -9,10 +9,11 @@ public class main {
 
     public static void show() {
 
-
     }
 
     public static void main(String[] args) {
+
+        List<Song> playlistSong = new ArrayList<>();
 
         List<Song> allSongs = new ArrayList<Song>();
         Song song1 = new Song("Traitor", new Artist("Olivia Rodrigo"), new Album("Sour"), new Duration(3.50));
@@ -48,36 +49,42 @@ public class main {
         songsInThePlayList.add(song10);
         allPlayLists.add(playList1);
 
+        System.out.println(allPlayLists.get(0).songsInPlaylist);
+
         JukeBox jukeBox = new JukeBox(allSongs, allPlayLists);
 
         Scanner menu = new Scanner(System.in);
         boolean condition = true;
         Operation classOperation = new Operation();
-        System.out.println("\n\t \t \t \t \t \t \t\t\t\t   JUKEBOX \t \t \t \t\t \t \t ");
-        System.out.println(("_____________________________________________________________________________________________________"));
-        System.out.print("|\t ");
-        System.out.println("SONG NAME \t \t \t \t \t\tARTIST \t \t \t \t \t\t ALBUM \t \t \t\t \t DURATION \t|");
-        System.out.println("|___________________________________________________________________________________________________|");
-        System.out.println("|(1)Traitor\t\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t3.50\t|");
-        System.out.println("|(2)Good 4 U\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t2.59\t|");
-        System.out.println("|(3)Happier Than Ever\t\t\tBillie Eilish\t\t\t\tHappier Than Ever\t\t\t\t4.59\t|");
-        System.out.println("|(4)Bad Habits\t\t\t\t\tEd Sheeran\t\t\t\t\tBad Habits \t\t\t\t\t\t3.52\t|");
-        System.out.println("|(5)Painkiller\t\t\t\t\tRuel \t\t\t\t\t\tPainkiller\t\t\t\t\t\t3.34 \t|");
-        System.out.println("|(6)Cheap Thrills\t\t\t\tSia\t\t\t\t\t\t\tThis is Acting\t\t\t\t\t3.45\t|");
-        System.out.println("|(7)Wish U Were Here\t\t\tAvril Lavigne\t\t\t\tGoodbye Lullaby\t\t\t\t\t3.46\t|");
-        System.out.println("|(8)Womanizer\t\t\t\t\tBritney Spears \t\t\t\tCircus\t\t\t\t\t\t\t3.45\t|");
-        System.out.println("|(9)Rumah ke Rumah\t\t\t\tHindia \t\t\t\t\t\tMenari dengan bayangan\t\t\t4.38\t|");
-        System.out.println("|(10)Lara\t\t\t\t\t\tDialog Senja \t\t\t\tLara\t\t\t\t\t\t\t5.27\t|");
-        System.out.println("|\t \t __________________________________________________________________________________         |");
-        System.out.println("|\t \t|          (1) PLAY MUSIC                 |         (2)GO TO PLAYLIST              |        |");
-        System.out.println("|\t \t|_________________________________________|________________________________________|        |");
-        System.out.println("|\t \t                                                                                            |");
-        System.out.println("|___________________________________________________________________________________________________| ");
-        System.out.print(" \t \tChoose menu: ");
-        String option = menu.nextLine();
-
         while (condition) {
-            System.out.println();
+            System.out.println("\n\t \t \t \t \t \t \t\t\t\t \tJ U K E B O X \t \t \t \t\t \t \t ");
+            System.out.println(("_____________________________________________________________________________________________________"));
+            System.out.println("|\t \t                                                                                            |");
+            System.out.println("|\t \t                                     MAIN MENU                                              |");
+
+
+            // System.out.print("|\t ");
+            //System.out.println("SONG NAME \t \t \t \t \t\tARTIST \t \t \t \t \t\t ALBUM \t \t \t\t \t DURATION \t|");
+            // System.out.println("|___________________________________________________________________________________________________|");
+            //System.out.println("|(1)Traitor\t\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t3.50\t|");
+            //System.out.println("|(2)Good 4 U\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t2.59\t|");
+            //System.out.println("|(3)Happier Than Ever\t\t\tBillie Eilish\t\t\t\tHappier Than Ever\t\t\t\t4.59\t|");
+            //System.out.println("|(4)Bad Habits\t\t\t\t\tEd Sheeran\t\t\t\t\tBad Habits \t\t\t\t\t\t3.52\t|");
+            // System.out.println("|(5)Painkiller\t\t\t\t\tRuel \t\t\t\t\t\tPainkiller\t\t\t\t\t\t3.34 \t|");
+            //System.out.println("|(6)Cheap Thrills\t\t\t\tSia\t\t\t\t\t\t\tThis is Acting\t\t\t\t\t3.45\t|");
+            //System.out.println("|(7)Wish U Were Here\t\t\tAvril Lavigne\t\t\t\tGoodbye Lullaby\t\t\t\t\t3.46\t|");
+            // System.out.println("|(8)Womanizer\t\t\t\t\tBritney Spears \t\t\t\tCircus\t\t\t\t\t\t\t3.45\t|");
+            //System.out.println("|(9)Rumah ke Rumah\t\t\t\tHindia \t\t\t\t\t\tMenari dengan bayangan\t\t\t4.38\t|");
+            //System.out.println("|(10)Lara\t\t\t\t\t\tDialog Senja \t\t\t\tLara\t\t\t\t\t\t\t5.27\t|");
+            System.out.println("|\t \t __________________________________________________________________________________         |");
+            System.out.println("|\t \t|          (1) PLAY MUSIC                 |         (2)GO TO PLAYLIST              |        |");
+            System.out.println("|\t \t|_________________________________________|________________________________________|        |");
+            System.out.println("|\t \t                                                                                            |");
+            System.out.println("|___________________________________________________________________________________________________| ");
+            System.out.print(" \t \tChoose menu: ");
+            String option = menu.nextLine();
+
+            // System.out.println();
             switch (option) {
                 case "1" -> {
                     System.out.println("\n\t \t \t \t \t \t \t\t\t\t   PLAY MUSIC \t \t \t \t\t \t \t ");
@@ -95,10 +102,12 @@ public class main {
                     System.out.println("|(8)Womanizer\t\t\t\t\tBritney Spears \t\t\t\tCircus\t\t\t\t\t\t\t3.45\t|");
                     System.out.println("|(9)Rumah ke Rumah\t\t\t\tHindia \t\t\t\t\t\tMenari dengan bayangan\t\t\t4.38\t|");
                     System.out.println("|(10)Lara\t\t\t\t\t\tDialog Senja \t\t\t\tLara\t\t\t\t\t\t\t5.27\t|");
-                    System.out.println("|(exit) Keluar dari program                                                                         |");
+                    System.out.println("|(exit) CLOSE THE PROGRAM                                                                           |");
                     System.out.println("|___________________________________________________________________________________________________|");
-                    System.out.print("  |\t \tPUT INPUT NUMBER : ");
+                    System.out.print("  \t \tInput song number : ");
                     String chooseSong = menu.nextLine();
+                    System.out.println("\n");
+                    System.out.println("\t \t \t \t \t \t \t\t\t\t  NOW PLAYING\t \t \t \t\t \t \t ");
                     switch (chooseSong) {
                         case "1":
                             jukeBox.playSong("Traitor");
@@ -131,42 +140,109 @@ public class main {
                             jukeBox.playSong("Lara");
                             break;
                         case "exit":
-                            System.out.println("Keluar!");
+                            System.out.println("EXIT!");
                             exit(0);
                     }
-                    System.out.println("|___________________________________________________________________________________________________|");
+                    System.out.println("\n\t================BACK TO MAIN MENU================");
+                    System.out.println("TYPE 'Y' FOR YES");
+                    System.out.println("TYPE 'N' FOR QUIT");
+                    String statement = menu.nextLine();
+                    System.out.println("\t=================================================");
+
+                    if (statement.equalsIgnoreCase("y")) {
+                        classOperation.setStart("Y");
+                    } else {
+                        classOperation.setStart("N");
+                    }
+
+                    if (classOperation.isStart()) {
+                        condition = true;
+                    } else {
+                        condition = false;
+                        break;
+                    }
                 }
                 case "2" -> {
                     System.out.println("\n\t \t \t \t \t \t \t\t\t\t   PLAYLIST  \t \t \t \t\t \t \t ");
-                    System.out.println("____________________________________________________________________________________________________");
-                    jukeBox.playPlayList("Hits Hari Ini!");
+                    System.out.println("_____________________________________________________________________________________________________");
+                    System.out.print("|\t ");
+                    System.out.println("SONG NAME \t \t \t \t \t\tARTIST \t \t \t \t \t\t ALBUM \t \t \t\t \t DURATION \t|");
+                    System.out.println("|___________________________________________________________________________________________________|");
+                    System.out.println("|(1)Traitor\t\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t3.50\t|");
+                    System.out.println("|(2)Good 4 U\t\t\t\t\tOlivia Rodrigo\t\t\t\tSour\t\t\t\t\t\t\t2.59\t|");
+                    System.out.println("|(3)Happier Than Ever\t\t\tBillie Eilish\t\t\t\tHappier Than Ever\t\t\t\t4.59\t|");
+                    System.out.println("|(4)Bad Habits\t\t\t\t\tEd Sheeran\t\t\t\t\tBad Habits \t\t\t\t\t\t3.52\t|");
+                    System.out.println("|(5)Painkiller\t\t\t\t\tRuel \t\t\t\t\t\tPainkiller\t\t\t\t\t\t3.34 \t|");
+                    System.out.println("|(6)Cheap Thrills\t\t\t\tSia\t\t\t\t\t\t\tThis is Acting\t\t\t\t\t3.45\t|");
+                    System.out.println("|(7)Wish U Were Here\t\t\tAvril Lavigne\t\t\t\tGoodbye Lullaby\t\t\t\t\t3.46\t|");
+                    System.out.println("|(8)Womanizer\t\t\t\t\tBritney Spears \t\t\t\tCircus\t\t\t\t\t\t\t3.45\t|");
+                    System.out.println("|(9)Rumah ke Rumah\t\t\t\tHindia \t\t\t\t\t\tMenari dengan bayangan\t\t\t4.38\t|");
+                    System.out.println("|(10)Lara\t\t\t\t\t\tDialog Senja \t\t\t\tLara\t\t\t\t\t\t\t5.27\t|");
+                    System.out.println("|(exit) CLOSE THE PROGRAM                                                                           |");
+                    System.out.println("|___________________________________________________________________________________________________|");
+                    System.out.print("\nAdd song number : ");
+                    String songPlaylist = menu.nextLine();
+                    System.out.println("\n");
+                    switch (songPlaylist) {
+                        case "1":
+                            playlistSong.add(allSongs.get(0));
+                            break;
+                        case "2":
+                            playlistSong.add(allSongs.get(1));
+                            break;
+                        case "3":
+                            playlistSong.add(allSongs.get(2));
+                            break;
+                        case "4":
+                            playlistSong.add(allSongs.get(3));
+                            break;
+                        case "5":
+                            playlistSong.add(allSongs.get(4));
+                            break;
+                        case "6":
+                            playlistSong.add(allSongs.get(5));
+                            break;
+                        case "7":
+                            playlistSong.add(allSongs.get(6));
+                            break;
+                        case "8":
+                            playlistSong.add(allSongs.get(7));
+                            break;
+                        case "9":
+                            playlistSong.add(allSongs.get(8));
+                            break;
+                        case "10":
+                            playlistSong.add(allSongs.get(9));
+                            break;
+                        default:
+                            System.out.println("SONG NOT FOUND");
+                            break;
+                    }
+                    System.out.println("\n\t \t \t \t \t \t \t\t\t\t YOUR PLAYLIST \t \t \t \t\t \t \t ");
+                    for (int i = 0; i < playlistSong.size(); i++) {
+                        System.out.println(playlistSong.get(i).songName);
+                    }
+
+                    System.out.println("\n\t================BACK TO MAIN MENU================");
+                    System.out.println("TYPE 'Y' FOR YES");
+                    System.out.println("TYPE 'N' FOR QUIT");
+                    String statement = menu.nextLine();
+                    System.out.println("\t=================================================");
+
+                    if (statement.equalsIgnoreCase("y")) {
+                        classOperation.setStart("Y");
+                    } else {
+                        classOperation.setStart("N");
+                    }
+
+                    if (classOperation.isStart()) {
+                        condition = true;
+                    } else {
+                        condition = false;
+                        break;
+                    }
                 }
-                default -> System.out.println("INVALID INPUT, TRY AGAIN");
             }
-
-            /** System.out.println("\n\t================BACK TO MAIN MENU================");
-             System.out.println("TYPE 'Y' FOR YES");
-             System.out.println("TYPE 'N' FOR QUIT");
-             String statement = menu.nextLine();
-             System.out.println("\t======================================================");
-
-             if(statement == "y" && statement == "Y")
-             {
-             classOperation.setStart("Y");
-             }else
-             {
-             classOperation.setStart("N");
-             }
-
-             if (classOperation.isStart())
-             {
-             condition = true;
-             }else
-             {
-             condition = false;
-             break;
-             }
-             **/
         }
     }
 }

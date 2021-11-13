@@ -3,7 +3,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class JukeBox {
+public class JukeBox
+{
     List<Song> allSongs;
     List<PlayList> allPlayLists;
     Queue<Song> currentPlayQueue;

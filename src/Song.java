@@ -24,7 +24,7 @@ public class Song
 
     public void playSong()
     {
-        System.out.println("Playing the song: " + this.songName);
+        System.out.println("Song: " + this.songName);
         System.out.println("From artist: " + this.artist);
         System.out.println("From album: " + this.album);
         System.out.println("Song duration: " + this.duration);
